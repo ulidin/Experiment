@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     let list = document.getElementById("ul_list");
 
     list.addEventListener("click", function(event) {
-        if (event.target.tagName == "LI") {
+        if (event.target.tagName == "LI" && confirm('Är du säker på att du vill ta bort den?')) {
             event.target.remove();
         }
     })
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
         let message = document.getElementById("message");
         let new_message = document.createElement("li");
         new_message.innerHTML = message.value;
+
+
 
         let div = document.getElementById("ul_list");
         div.appendChild(new_message);
