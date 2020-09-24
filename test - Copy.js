@@ -38,11 +38,13 @@ class Dice_set {
 
     checkTwoPairs() {
         let twoPairs = false;
-        for (let i = 0; i <= 6; i++) {
-            if (this.dice_no[i] === (2 || 4)) {
-                twoPairs = i * 2;
-                console.log("two pairs: " + twoPairs);
+        for (let i = 6; i >= 1; i--) {
+            if (this.dice_no[i] === (2)) {
+                twoPairs = i;
+                twoPairs += twoPairs
+                console.log("two pairs1: " + twoPairs);
             }
+
         }
         console.log("sum two pairs: " + twoPairs);
         return twoPairs;
