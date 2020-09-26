@@ -1,6 +1,7 @@
-function find_duplicate_in_array(arra1) {
-    const object = {};
-    const result = [];
+function pariOfTwo() {
+    let arra1 = [4, 1, 5, 4, 5]
+    let object = {};
+    let result = [];
 
     arra1.forEach(item => {
         if (!object[item])
@@ -8,7 +9,7 @@ function find_duplicate_in_array(arra1) {
         object[item] += 1;
     })
 
-    for (const prop in object) {
+    for (let prop in object) {
         if (object[prop] >= 2) {
             result.push(prop * 2);
         }
@@ -18,4 +19,5 @@ function find_duplicate_in_array(arra1) {
 
 }
 
-console.log(find_duplicate_in_array([4, 1, 5, 4, 5]));
+//console.log(find_duplicate_in_array([4, 1, 5, 4, 5]));
+console.log(pariOfTwo());
